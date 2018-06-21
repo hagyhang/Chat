@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Chat</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+       <servlet-name>CreateUserProcessServlet</servlet-name>
+       <servlet-class>mainServletController.CreateUserProcessServlet</servlet-class>
+   </servlet>    
+   <servlet-mapping>
+       <servlet-name>CreateUserProcessServlet</servlet-name>
+       <url-pattern>/createUserProcess</url-pattern>
+   </servlet-mapping>
+   
+     <servlet>
+       <servlet-name>LoginProcessServlet</servlet-name>
+       <servlet-class>mainServletController.LoginProcessServlet</servlet-class>
+   </servlet>    
+   <servlet-mapping>
+       <servlet-name>LoginProcessServlet</servlet-name>
+       <url-pattern>/loginprocess</url-pattern>
+   </servlet-mapping>
+   
+     <servlet>
+       <servlet-name>LogoutProcessServlet</servlet-name>
+       <servlet-class>mainServletController.LogoutProcessServlet</servlet-class>
+   </servlet>    
+   <servlet-mapping>
+       <servlet-name>LogoutProcessServlet</servlet-name>
+       <url-pattern>/logoutprocess</url-pattern>
+   </servlet-mapping>
+   
+     <servlet>
+       <servlet-name>OnlineUser</servlet-name>
+       <servlet-class>mainServletController.OnlineUser</servlet-class>
+   </servlet>    
+   <servlet-mapping>
+       <servlet-name>OnlineUser</servlet-name>
+       <url-pattern>/OnlineUser</url-pattern>
+   </servlet-mapping>
+   <!--
+   <servlet>
+       <servlet-name>SendMessage</servlet-name>
+       <servlet-class>mainServletController.SendMessage</servlet-class>
+   </servlet>    
+   <servlet-mapping>
+       <servlet-name>SendMessage</servlet-name>
+       <url-pattern>/sendMessage</url-pattern>
+   </servlet-mapping>
+   -->
+</web-app>

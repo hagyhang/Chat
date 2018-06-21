@@ -1,0 +1,47 @@
+<html>
+    <head>
+    <title>Demo</title>
+    <script>
+    
+        function sendMessage(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = funtion(){
+                if (this.readyState == 4 && this.status == 200){
+                    var xmlDoc = xhttp.responseXML;
+                    var sinhviens = xmlDoc.getElementByTagName("sinhvien");
+                    var bangdiemhtml = "<p><table border = 1, align = center>";
+                    bangdiemhtml += "<tr> <th>Ma sv</th> <th>Ho sv</th> <th>Diem</th> </tr>";
+                    for (var i=0; i < sinhviens.length; i++)
+                    {
+                        var masv = xmlDoc.getElementByTagName("masv");
+                        var hoten = xmlDoc.getElementByTagName("hoten");
+                        var diem = xmlDoc.getElementByTagName("diem");
+                        bangdiemhtml += "<tr><td>" + masv + "</td><td>" + hote + "</td></tr>";
+                    }
+                    bangdiemhtml += "</table>"; 
+                    document.getElementById("output").innerHTML = bangdiemhtml;
+                    //output.innerHTML = this.responseText;
+                }
+            };
+       
+            xhttp.open("GET", "bangdiem.xml", true);
+            xhttp.send();
+        }
+
+ 
+    </script>
+    </head>
+    <body>
+<!--    
+        <p><table border = 1, align = center>
+        <tr> <th>Ma sv</th> <th>Ho sv</th> <th>Diem</th> </tr>
+        <tr> <td>Ma sv</td> <th>Ho sv</td> <th>Diem</td> </tr>
+         <tr> <td>Ma sv</td> <th>Ho sv</td> <th>Diem</td> <th>Diem</td> </tr>
+    </table>
+-->
+        <div id='output'></div>
+        <br/>
+        <input type='button' id='send' value='Xem diem' onclick='sendMessage();
+        ' />
+    </body>
+</html>

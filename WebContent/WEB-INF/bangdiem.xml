@@ -1,0 +1,17 @@
+<bangdime>
+	<sinhvien>
+		<masv>001</masv>
+		<hoten>Nguyễn Văn An</hoten>
+		<diem>10</diem>
+	</sinhvien>
+	<sinhvien>
+		<masv>002</masv>
+		<hoten>Trần Văn Binh</hoten>
+		<diem>9.5</diem>
+	</sinhvien>
+	<sinhvien>
+		<masv>002</masv>
+		<hoten>Lê Văn Chí</hoten>
+		<diem>8.5</diem>
+	</sinhvien>
+</bangdime>
